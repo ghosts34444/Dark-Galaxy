@@ -1,3 +1,14 @@
 {
-  "outputDirectory": "saut"
+  "outputDirectory": "saut",
+  "headers": [
+    {
+      "source": "/assets/icons/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
 }
