@@ -88,6 +88,22 @@
     <a href="#" class="back-btn" id="back-button">Вернуться</a>
   </div>
   <script src="../../styles/stars/stars.js"></script>
-  <script src="../..styles/404/404.js"></script>
+  <script>
+    
+    const url = new URL(window.location.href);
+    const path = url.pathname + url.search;
+    document.getElementById('search-query').textContent = path;
+
+    // Кнопка "Назад"
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = '/saut/index.html'; // или просто '/'
+      }
+    });
+  </script>
 </body>
 </html>
