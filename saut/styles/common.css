@@ -1,0 +1,474 @@
+/* ========================================
+ОСНОВНЫЕ СТИЛИ (объединённые и оптимизированные)
+======================================== */
+
+/* === ПЕРЕМЕННЫЕ === */
+:root {
+  /* Цвета */
+  --bg-primary: #0f0f1b;
+  --bg-secondary: #1e1e32;
+  --text-primary: #f5f5f5;
+  --text-secondary: #e0e0ff;
+  --accent: #b388eb;
+  --accent-alt: #8a6dff; /* из guids.css */
+
+  /* Прозрачность */
+  --glass: rgba(30, 30, 50, 0.9);
+  --glass-light: rgba(30, 30, 50, 0.85);
+  --glass-hover: rgba(50, 50, 80, 0.9);
+
+  /* Границы */
+  --border: rgba(80, 80, 120, 0.3);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-accent: var(--accent-alt); /* из guids.css */
+
+  /* Эффекты */
+  --blur: 12px;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  /* Радиусы */
+  --radius: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  /* Отступы */
+  --spacing: 20px;
+  --spacing-lg: 30px;
+
+  /* Шрифты */
+  --font: 'Exo 2', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* === СБРОС === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-primary);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text-secondary);
+  font-family: var(--font);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+/* === КОНТЕЙНЕРЫ === */
+main {
+  padding-top: 90px;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
+  text-align: center;
+}
+
+/* === ТЕКСТОВЫЕ БЛОКИ === */
+.text-block {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 0;
+  margin: var(--spacing-lg) 0;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-primary);
+}
+
+.text-block h2,
+.text-block p {
+  color: inherit;
+}
+
+/* === БАННЕРЫ === */
+/* Баннер на всю ширину */
+.banner-full {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  display: block;
+}
+
+/* Главный баннер на главной */
+.hero-banner {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+/* === КНОПКИ === */
+.btn,
+.open-guides-btn,
+.mods-btn,
+.creator-btn,
+.back-to-main-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--glass);
+  color: var(--text-secondary);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.open-guides-btn,
+.mods-btn,
+.back-to-main-btn {
+  background: var(--accent-alt);
+  color: white;
+}
+
+.btn:hover,
+.open-guides-btn:hover,
+.mods-btn:hover,
+.back-to-main-btn:hover,
+.creator-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* === МОДАЛЬНЫЕ ОКНА === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background: var(--glass);
+  margin: 5% auto;
+  padding: 20px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === ПОИСК === */
+.search-wrapper,
+.guide-search-wrapper {
+  position: sticky;
+  z-index: 998;
+  max-width: 400px;
+  margin: 10px auto;
+  display: flex;
+  gap: 5px;
+}
+
+#guide-search,
+#search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-accent);
+  background: var(--glass-light);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  outline: none;
+}
+
+#search-clear {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: none;
+}
+
+/* === ТАБЛИЦЫ === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
+th {
+  font-weight: 600;
+  background: var(--glass-light);
+  border-bottom: 2px solid var(--border);
+}
+
+/* === 3D МОДЕЛИ === */
+.model-container {
+  margin: var(--spacing-lg) 0;
+}
+
+model-viewer {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius-md);
+}
+
+/* === GUI === */
+.pc-gui-wrapper,
+.mobile-gui-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.map-tooltip {
+  position: absolute;
+  background: var(--glass);
+  border: 2px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  z-index: 1000;
+  white-space: nowrap;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mobile-zone-highlight {
+  position: absolute;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.zone-id-label {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* === РЕЗУЛЬТАТЫ ПОИСКА === */
+#search-results-container {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.search-result {
+  background: rgba(40, 40, 60, 0.8);
+  border-radius: var(--radius-md);
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 1px solid rgba(100, 100, 130, 0.3);
+}
+
+.search-result:hover {
+  transform: translateY(-3px);
+  background: rgba(50, 50, 70, 0.9);
+  border-color: var(--accent-alt);
+}
+
+.search-result-image {
+  width: 100%;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-result-image img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.search-result h4 {
+  margin: 0 0 6px 0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.search-result small {
+  color: #aaa;
+  font-size: 14px;
+  display: block;
+  margin-top: 4px;
+}
+
+/* === ПОДДЕРЖКА BACKDROP-FILTER === */
+.supports-backdrop .text-block,
+.supports-backdrop .content,
+.supports-backdrop .modal-content,
+.supports-backdrop .rules,
+.supports-backdrop .mod-table,
+.supports-backdrop .search-input-wrapper,
+.supports-backdrop .mods-btn {
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+}
+
+.no-backdrop .text-block,
+.no-backdrop .content,
+.no-backdrop .modal-content,
+.no-backdrop .rules,
+.no-backdrop .mod-table,
+.no-backdrop .search-input-wrapper,
+.no-backdrop .mods-btn {
+  background: var(--glass) !important;
+  backdrop-filter: none !important;
+}
+
+/* === МОБИЛЬНАЯ АДАПТАЦИЯ === */
+@media (max-width: 768px) {
+  /* Viewport meta tag обязателен! */
+  main {
+    padding-top: 60px;
+  }
+
+  /* Увеличенные элементы */
+  .btn,
+  .open-guides-btn,
+  .mods-btn,
+  .back-to-main-btn {
+    padding: 16px 28px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .search-wrapper,
+  .guide-search-wrapper {
+    display: flex !important;
+    top: 120px;
+    max-width: 90%;
+    margin: 15px;
+  }
+
+  #guide-search,
+  #search-input {
+    font-size: 1.2rem;
+    padding: 14px;
+  }
+
+  /* Увеличенный текст */
+  .content,
+  .text-block,
+  .section-box {
+    padding: 15px;
+    margin: 15px;
+    font-size: 1.05rem;
+  }
+
+  .content h2,
+  .text-block h2,
+  .section-box h3 {
+    font-size: 1.6rem;
+  }
+
+  /* Упрощение для слабых устройств */
+  .text-block,
+  .modal-content,
+  .search-result,
+  .rules,
+  .mod-table {
+    backdrop-filter: none !important;
+    background: rgba(30, 30, 50, 0.95) !important;
+  }
+
+  /* Поиск на мобиле */
+  .search-results-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .search-result h4 {
+    font-size: 16px;
+  }
+
+  .search-result small {
+    font-size: 13px;
+  }
+
+  /* Отключаем зум на инпуте */
+  #guide-search,
+  #search-input {
+    font-size: 16px;
+  }
+}

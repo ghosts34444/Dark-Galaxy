@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - DarkGalaxy</title>
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(#0f0f1b, #373768, #000000);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e0e0ff;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 30px;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #e1b4f7;
+  margin: 0 0 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.error-message {
+  font-size: 1.4rem;
+  margin: 0 0 20px;
+}
+
+.query {
+  color: #c2a0db;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(80, 80, 120, 0.3);
+  border-radius: 50px;
+  color: #e0e0ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(106, 90, 205, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Звёзды (анимация уже в common.css) */
+.star {
+  position: absolute;
+  color: white;
+  font-size: 1.1em;
+  opacity: 0;
+}
+</style>
+</head>
+<body>
+
+  <div id="stars-container"></div>
+
+  <div class="content">
+    <div class="error-code">404</div>
+    <div class="error-message">Страница не найдена</div>
+    <div class="error-message">
+      Не удалось найти: <span class="query" id="search-query">—</span>
+    </div>
+    <a href="#" class="back-btn" id="back-button">Вернуться</a>
+  </div>
+  <script src="../../styles/stars/stars.js"></script>
+  <script src="../..styles/404/404.js"></script>
+</body>
+</html>

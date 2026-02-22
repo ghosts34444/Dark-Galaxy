@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Гайды: Магия</title>
+  <link rel="stylesheet" href="../../styles/common.css">
+  <link rel="stylesheet" href="../../styles/menu/menu.css">
+  <link rel="stylesheet" href="guide-bee.css">
+</head>
+<body>
+  <div id="stars-container"></div>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <ul class="nav-menu">
+        <li><a href="../../index.html" class="nav-link active">ГЛАВНАЯ</a></li>
+        <li><a href="../../pages/warp-info/warp-info.html" class="nav-link">ЦЕНЫ ВАРПА</a></li>
+        <li><a href="../../pages/services/services.html" class="nav-link">УСЛУГИ</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle">ГАЙДЫ</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-columns">
+              <div class="column">
+                <a href="../../pages/guids-magic/guids-magic.html">МАГИЯ</a>
+                <a href="../../pages/guids-tech/guids-tech.html">ТЕХНОЛОГИИ</a>
+                <a href="../../pages/guids-ae2/guids-ae2.html">АВТОМАТИЗАЦИЯ</a>
+                <a href="../../pages/guids-forestry/guids-forestry.html">ПЧЕЛОВОДСТВО</a>
+                <a href="../../pages/guids-dimension/guids-dimension.html">ИЗМЕРЕНИЕ ДРАКОНОВ</a>
+                <a href="../../pages/guids-galacticraft/guids-galacticraft.html">GALACTICRAFT</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="../../pages/about-saut/about-saut.html" class="nav-link">О САЙТЕ</a></li>
+        <li><a href="../../pages/about-server/about-server.html" class="nav-link">О СЕРВЕРЕ</a></li>
+        <li><a href="../../pages/creators/creators.html" class="nav-link creators-link">СОЗДАТЕЛИ</a></li>
+     </ul>
+  </div>
+</nav>
+
+<!-- Кнопка меню (только для мобил) -->
+<div class="menu-toggle">
+  <span></span>
+</div>
+  <!-- Поиск -->
+<div class="guide-search-wrapper">
+  <input type="text" id="guide-search" placeholder="Поиск по гайдам..." autocomplete="off">
+  <button id="search-clear">×</button>
+  <div id="search-suggestions" class="search-suggestions"></div>
+</div>
+<div id="search-results-container" class="search-results"></div>
+
+  <main class="content">
+    <h1>Магия</h1>
+
+    <!-- Мод: Thaumcraft -->
+<div class="guide-mod" id="thaumcraft">
+  <h2>Thaumcraft</h2>
+  
+  <div class="guide-section" id="arcane-table">
+    <div class="section-box">
+      <h3>Магический верстак</h3>
+      <p>Используется для создания зачарованных предметов...</p>
+      <img src="../../assets/image/arcane-table.png" class="section-image-top">
+    </div>
+  </div>
+
+      <div class="guide-section" id="crucible">
+        <h3>Плавильный котёл</h3>
+        <div class="section-content side-image">
+          <img src="assets/images/thaumcraft/crucible.png" class="section-image-left">
+          <div class="text">
+            <p>Позволяет плавить предметы...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Мод: Botania -->
+    <div class="guide-mod" id="botania">
+      <h2>Botania</h2>
+      <div class="guide-section" id="mana-pool">
+        <h3>Бассейн маны</h3>
+        <div class="section-content">
+          <img src="assets/images/botania/mana-pool.png" class="section-image-top">
+          <p>Хранилище маны...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ... остальные моды -->
+  </main>
+
+  <!-- Скрипты -->
+  <script src="../../styles/stars/stars.js"></script>
+  <script src="../../styles/menu/menu.js"></script>
+  <script src="../../data-base-guids/guides-data.js"></script>
+  <script src="../../data-base-guids/guides-search.js"></script>
+</body>
+</html>
