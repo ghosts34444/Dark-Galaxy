@@ -166,7 +166,7 @@ function performSearch(query) {
         );
         
         if (matches.length) {
-            html += `<h3>${dept.name}</h3><table class="search-results-table"><tr><th>Предмет</th><th>Цена</th></tr>`;
+            html += `<h3>${dept.name}</h3><table class="search-results-table">`;
             matches.forEach((item, index) => {
                 html += `<tr style="animation: fadeInRow 0.3s ease ${index * 0.05}s forwards; opacity: 0;">
                     <td>${item.name}</td>
@@ -183,5 +183,6 @@ function performSearch(query) {
     resultsDiv.classList.remove('closing');
     resultsDiv.classList.add('visible');
 }
+
 
 loadDepartments();
