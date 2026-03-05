@@ -170,19 +170,19 @@ function preloadBackgrounds() {
 }
 
 function applyRandomBackground() {
-    const background-png = document.querySelector('.background-png');
-    if (background-png && loadedImages.length > 0) {
+    const backgroundpng = document.querySelector('.background-png');
+    if (backgroundpng && loadedImages.length > 0) {
         const randomIndex = Math.floor(Math.random() * loadedImages.length);
         const randomImage = loadedImages[randomIndex];
-        background-png.style.backgroundImage = `url('${randomImage.src}')`;
-        background-png.classList.add('loaded');
+        backgroundpng.style.backgroundImage = `url('${randomImage.src}')`;
+        backgroundpng.classList.add('loaded');
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const ambientLight = document.querySelector('.ambient-light');  
-    if (background-png) {
-        background-png.style.background = 'rgba(30, 30, 50, 0.3)';я
+    if (backgroundpng) {
+        backgroundpng.style.background = 'rgba(30, 30, 50, 0.3)';
         preloadBackgrounds().then(() => {
             applyRandomBackground();
         });
