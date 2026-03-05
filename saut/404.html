@@ -101,7 +101,15 @@
       background-size: cover;
       pointer-events: none;
       z-index: 999;
+    }
+
+    .background-png {
       opacity: 0.1;
+      transition: opacity 2.2s ease;
+    }
+
+    .background-png.loaded {
+      opacity: 0.2;
     }
   </style>
 </head>
@@ -141,8 +149,7 @@
       '../../assets/image/019b812c-6070-7b28-a32f-f9253f64c081.webp',
       '../../assets/image/galaxy-wallpaper_1134901-199219.jpg',
       '../../assets/image/main.YO-gktiu.webp',
-      '../../assets/image/maxresdefault.jpg',
-      '../../assets/image/background_2.DH03cMnu.webp'
+      '../../assets/image/maxresdefault.jpg'
     ];
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -150,9 +157,15 @@
       if (ambientLight && backgroundImages.length > 0) {
         const randomIndex = Math.floor(Math.random() * backgroundImages.length);
         const randomImage = backgroundImages[randomIndex];
-        ambientLight.style.backgroundImage = `url('${randomImage}')`;
+        const img = new Image();
+        img.src = randomImage;
+        img.onload = () => {
+          ambientLight.style.backgroundImage = `url('${randomImage}')`;
+          ambientLight.classList.add('loaded');
+        };
       }
     });
   </script>
 </body>
+
 </html>
