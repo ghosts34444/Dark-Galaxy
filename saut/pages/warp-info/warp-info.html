@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Цены варпа — DarkGalaxy</title>
+  <link rel="stylesheet" href="../../styles/common.css">
+  <link rel="stylesheet" href="../../styles/menu/menu.css">
+  <link rel="stylesheet" href="../../styles/stars/strs.css">
+  <link rel="stylesheet" href="warp-info.css" />
+</head>
+
+<body>
+
+  <div id="stars-container"></div>
+  <div class="ambient-light"></div>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <ul class="nav-menu">
+        <li><a href="../warp-info/warp-info.html" class="nav-link  active">ЦЕНЫ ВАРПА</a></li>
+        <li><a href="../../index.html" class="nav-link">ГЛАВНАЯ</a></li>
+        <li><a href="../guids/guids.html" class="nav-link">ГАЙДЫ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="search-input-wrapper">
+    <input type="text" id="search-input" placeholder="Введите название предмета (от 1 буквы)" autocomplete="off">
+    <button class="search-clear" id="search-clear">×</button>
+  </div>
+
+  <div class="menu-toggle">
+    <span></span>
+  </div>
+
+  <main id="content-wrapper">
+    <div class="content">
+
+      <h1>Цены варпа</h1>
+
+      <div class="rules">
+        <h2>Правила создания варпа</h2>
+        <ul>
+          <li>Варп должен быть одобрен администрацией DarkGalaxy, для одобрения обратитесь в тикет</li>
+          <li>На варпе должно быть не менее 3 отделов и общие кол-во обменников 100 торговых аппаратов</li>
+          <li>Варп должен выглядеть презентабельно и быть безопасным для игроков</li>
+          <li>Если вы хотите добавить предмет в таблицу, то напишите тикет, указав примерную стоимость за то или иное
+            кол-во предмета</li>
+        </ul>
+      </div>
+
+      <button class="mods-btn" id="open-mods-modal">Выбрать отдел</button>
+
+      <div class="search-results" id="search-results"></div>
+      <div class="mod-table" id="mod-table">
+        <button class="table-close" id="close-table">×</button>
+        <h3 id="table-title">Заголовок</h3>
+        <table>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+
+      <div id="mods-modal" class="modal">
+        <div class="modal-content" id="mods-list"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../../styles/stars/stars.js"></script>
+  <script src="../../styles/stars/stars-mobile.js"></script>
+  <script src="../../styles/menu/menu.js"></script>
+  <script src="warp-info.js"></script>
+</body>
+
+</html>

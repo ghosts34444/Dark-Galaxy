@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <link rel="stylesheet" href="../../styles/common.css">
+  <link rel="stylesheet" href="../../styles/menu/menu.css">
+  <link rel="stylesheet" href="../../styles/stars/stars.css">
+  <link rel="stylesheet" href="../guids-magic/guide-bee.css">
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+  <div id="stars-container"></div>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <ul class="nav-menu">
+        <li><a href="../../index.html" class="nav-link active">ГЛАВНАЯ</a></li>
+        <li><a href="../../pages/warp-info/warp-info.html" class="nav-link">ЦЕНЫ ВАРПА</a></li>
+        <li><a href="../../pages/services/services.html" class="nav-link">УСЛУГИ</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle">ГАЙДЫ</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-columns">
+              <div class="column">
+                <a href="../../pages/guids-magic/guids-magic.html">МАГИЯ</a>
+                <a href="../../pages/guids-tech/guids-tech.html">ТЕХНОЛОГИИ</a>
+                <a href="../../pages/guids-ae2/guids-ae2.html">АВТОМАТИЗАЦИЯ</a>
+                <a href="../../pages/guids-forestry/guids-forestry.html">ПЧЕЛОВОДСТВО</a>
+                <a href="../../pages/guids-dimension/guids-dimension.html">ИЗМЕРЕНИЕ ДРАКОНОВ</a>
+                <a href="../../pages/guids-galacticraft/guids-galacticraft.html">GALACTICRAFT</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="../../pages/about-saut/about-saut.html" class="nav-link">О САЙТЕ</a></li>
+        <li><a href="../../pages/about-server/about-server.html" class="nav-link">О СЕРВЕРЕ</a></li>
+        <li><a href="../../pages/creators/creators.html" class="nav-link creators-link">СОЗДАТЕЛИ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="menu-toggle">
+    <span></span>
+  </div>
+
+  <div class="search-input-wrapper">
+    <input type="text" id="guide-search" placeholder="Поиск по всем гайдам..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false">
+    <button class="search-clear" id="search-clear">×</button>
+  </div>
+
+  <div id="search-results-container" class="search-results"></div>
+
+  <main id="content-wrapper">
+    <div class="content">
+      <h1>Пчеловодство: от новичка до профи</h1>
+      <div class="section-box">
+        <p>Приветствую! В этом гайде я расскажу тебе всё, что нужно знать о пчеловодстве на нашем сервере — от простых
+          механизмов до выведения топ-ген пчёл.</p>
+      </div>
+
+      <div class="guide-section" id="4.0">
+        <h2>Основные механизмы</h2>
+      </div>
+
+      <div class="guide-section" id="4.1">
+        <div class="section-box">
+          <img src="../../assets/image/аля.png" class="section-image" alt="Экстрактор ДНК">
+          <h3>Экстрактор ДНК</h3>
+          <p>Извлекает жидкий ДНК из пчёл, деревьев, бабочек и пыльцы.</p>
+          <p><strong>Механизм работы:</strong> для работы требуются трутни, принцессы, матки, бабочки, саженцы,
+            пыльца, гусеницы или нектар в баночке. На одно извлечение расходуется 160 000 RF энергии и с шансом 10%
+            расходуется лабораторная посуда.</p>
+          <p><strong>Подключение:</strong> подключите экстрактор ДНК к источнику RF энергии. Устройство начнёт
+            работать автоматически при наличии энергии и необходимых ресурсов.</p>
+          <p><strong>Автоматизация:</strong> можно подключить к системам автотранспорта (например, Ender IO или AE2).
+            Он будет принимать предметы с любой стороны и выводить жидкий ДНК через трубы.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.2">
+        <div class="section-box">
+          <img src="../../assets/image/аля.png" class="section-image" alt="Экстрактор ДНК">
+          <h3>Генетический импринтер</h3>
+          <p>Заменяет хромосомы у пчёл, бабочек, саженцев и пыльцы на соответствующие из генетического шаблона.</p>
+          <p><strong>Механизм работы:</strong> требуются организмы и генетический шаблон с генами. На одну операцию
+            расходуется 160 000 RF энергии и одна генетическая посуда.</p>
+          <p><strong>Подключение и автоматизация:</strong> работает так же, как и экстрактор ДНК — подключи к
+            AE2/Ender IO, и он сам будет обрабатывать ресурсы.</p>
+        </div>
+      </div>
+
+
+      <div class="guide-section" id="4.3">
+        <div class="section-box">
+          <h3>Мутатрон</h3>
+          <p>Необходим для выведения пчёл или деревьев. При скрещивании получается случайная пчела/дерево.</p>
+          <p><strong>Механизм работы:</strong> для мутации пчёл помещайте одну принцессу и одного трутня разных видов.
+            Для деревьев — саженец и пыльцу. Требуется мутаген и лабораторная посуда. На одну мутацию расходуется 40
+            000 RF энергии и 1000 мБ (1 ведро) мутагена.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.4">
+        <div class="section-box">
+          <h3>Продвинутый мутатрон</h3>
+          <p>Улучшенная версия мутатрона. Позволяет выбрать нужную мутацию пчелы или дерева.</p>
+          <p><strong>Механизм работы:</strong> помещайте принцессу и трутня разного вида, а в интерфейсе выберите
+            желаемый результат. Требуется лабораторная посуда и мутаген.</p>
+          <p><strong>Важно:</strong> выбор вида необходимо делать вручную — автоматизация тут не поможет.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.5">
+        <div class="section-box">
+          <h3>Мутагенный производитель</h3>
+          <p>Необходим для создания мутагена.</p>
+          <p><strong>Механизм работы:</strong> за счёт энергии преобразует ресурсы в мутаген:</p>
+          <ul>
+            <li>Красная пыль — 100 мБ</li>
+            <li>Блок красного камня — 900 мБ</li>
+            <li>Светящаяся пыль — 200 мБ</li>
+            <li>Уран-235 — 9000 мБ</li>
+            <li>Кусочек урана-235 — 1000 мБ</li>
+          </ul>
+          <p>На преобразование одного предмета требуется 200 000 RF энергии. Для передачи мутагена используйте трубы.
+          </p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.6">
+        <div class="section-box">
+          <h3>Генетический пробоотборник</h3>
+          <p>Позволяет вытягивать случайные гены из организмов, уничтожая их.</p>
+          <p><strong>Требуется:</strong> организм, образец пустого гена и лабораторная посуда. Расход: 40 000 RF, одна
+            посуда и один пустой ген.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.7">
+        <div class="section-box">
+          <h3>Генетический транспозер</h3>
+          <p>Дублирует генетические шаблоны или образцы гена.</p>
+          <p><strong>Расход:</strong> 40 000 RF и одна генетическая посуда на операцию.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.8">
+        <div class="section-box">
+          <h3>Протеиновый разжижитель</h3>
+          <p>Производит протеин из сырого мяса или рыбы. Расход: 40 000 RF на операцию.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.9">
+        <div class="section-box">
+          <h3>Генетический репликатор</h3>
+          <p>Создаёт пчёл, бабочек или саженцы из готового генетического шаблона, протеина и жидкого ДНК.</p>
+          <p><strong>Результат:</strong> всегда получается матка низкой породы.</p>
+          <p><strong>Расход:</strong> 500 000 RF, 1000 мБ ДНК и 5000 мБ протеина.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.10">
+        <div class="section-box">
+          <h3>Промышленная пасека</h3>
+          <p>Заменяет большой улей, но без 90% сокращения производства. Имеет 4 слота под улучшения и не
+            поддерживает рамки.</p>
+          <p><strong>Улучшения:</strong></p>
+          <ul>
+            <li>«Производство» — +20% продуктивности, +20% энергии</li>
+            <li>«Цветение» — +20% цветения, +10% энергии</li>
+            <li>«Нагревание» — +25% температуры, +5% энергии</li>
+            <li>«Увлажнение» — +25% влажности, +5% энергии</li>
+            <li>«Сито» — сбор пыльцы, +25% энергии</li>
+            <li>«Автоматизация» — полная автоматизация, +10% энергии</li>
+            <li>«Открытое небо» — симуляция, +5% энергии</li>
+            <li>«Генетическая стабилизация» — распад −100%, +100% энергии</li>
+            <li>И эмуляции биомов (ад, джунгли, пустыня и др.) — +50% энергии</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.11">
+        <h2>Выведение топ-гена</h2>
+        <div class="section-box">
+          <p>Для выведения топ-гена пчёл нам понадобятся: пасеки, продвинутый мутатрон, генетический
+            пробоотборник, генетический шаблон, образцы пустого гена, мутагенный производитель и генетический
+            импринтер.</p>
+          <p>Всего необходимо вывести 12 генов из 13. Последний ген — это ген вида.</p>
+          <ol>
+            <li><strong>Срок жизни:</strong> максимальное значение — «длиннейший». Используй драконью,
+              одинокую или докторскую пчелу.</li>
+            <li><strong>Территория:</strong> «крупнейший» — лучше всего аура пчела.</li>
+            <li><strong>Плодовитость:</strong> «наивысшая (4)» — зимняя пчела.</li>
+            <li><strong>День/Ночь:</strong> «игнорирует» — каменная пчела.</li>
+            <li><strong>Летун:</strong> «да» — каменная пчела.</li>
+            <li><strong>Цветение:</strong> «максимально быстрое» — аура пчела.</li>
+            <li><strong>Цветы:</strong> «камень» — каменная пчела.</li>
+            <li><strong>Работа в пещере:</strong> «да» — каменная пчела.</li>
+            <li><strong>Скорость:</strong> «Blinding» — Pyro пчела (или «наибыстрейшая» — аура пчела).</li>
+            <li><strong>Температура:</strong> «Обе 5» — с пчелы можно взять только «Обе 3» (Catty пчела).</li>
+            <li><strong>Влажность:</strong> «Обе 5» — с пчелы только «Обе 2» (выносливая пчела).</li>
+            <li><strong>Эффект:</strong> можно оставить без эффекта (луговая/волшебная) или взять
+              «Исследовательность» (райская пчела).</li>
+          </ol>
+
+          <h4>Получение «Обе 5» для температуры и влажности</h4>
+          <p>Для этого нужен <strong>акклиматизатор</strong>. Он требует RF энергию.</p>
+          <p><strong>Для повышения температуры:</strong> клади трутней Catty пчелы + живой огонёк (50%), живое
+            пламя (75%) или ведро лавы (75%).</p>
+          <p><strong>Для повышения влажности:</strong> трутни выносливой пчелы + ведро воды (75%) или песок
+            (15%).</p>
+          <p>Не факт, что получится с первого раза, но со временем ты увидишь у трутней ген «Обе 5». Затем
+            пропусти их через генетический пробоотборник — и получишь нужные гены!</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.12">
+        <h2>Основные механизмы FORESTRY</h2>
+      </div>
+
+      <div class="guide-section" id="4.13">
+        <div class="section-box">
+          <h3>Плотник</h3>
+          <p>Создаёт предметы, недоступные в обычном верстаке. Имеет окно для рецепта и резервуар для
+            жидкостей (вода, масло, мёд). После правильного крафта и заполнения жидкости — начинает работать
+            автоматически.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.14">
+        <div class="section-box">
+          <h3>Соковыжималка</h3>
+          <p>Производит жидкости из растений. Поддерживает печатные платы для ускорения.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.15">
+        <div class="section-box">
+          <h3>Бродильный аппарат</h3>
+          <p>Создаёт биомассу из растительности, реагентов (мульча, удобрение) и первичной жидкости
+            (мёд, сок, вода).</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.16">
+        <div class="section-box">
+          <h3>Увлажнитель</h3>
+          <p>Превращает пшеницу в мульчу через стадии: пшеница → плесневелая → загнивающая → мульча.
+            Требует воды и темноты.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.17">
+        <div class="section-box">
+          <h3>Центрифуга</h3>
+          <p>Перерабатывает соты и продукты пчеловодства. Можно ускорять печатными платами.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.18">
+        <div class="section-box">
+          <h3>Дистиллятор</h3>
+          <p>Преобразует биомассу, смолу и мёд в этанол, скипидар и mead.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.19">
+        <div class="section-box">
+          <h3>Разливочный механизм</h3>
+          <p>Разливает жидкости по ёмкостям (ведра, канистры, капсулы).</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.20">
+        <div class="section-box">
+          <h3>Биогенератор</h3>
+          <p>Генерирует энергию из этанола или биомассы.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.21">
+        <div class="section-box">
+          <h3>Электроламповый завод</h3>
+          <p>Создаёт электронные лампы. Требует жидкое стекло (из песка/стекла).</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.22">
+        <h2>LOLI FORESTRY</h2>
+      </div>
+
+      <div class="guide-section" id="4.31">
+        <div class="section-box">
+          <model-viewer class="section-model" src="../../assets/models/forestry1.geo.glb" camera-controls auto-rotate ar
+            shadow-intensity="1" environment-image="neutral" loading="lazy"></model-viewer>
+          <h3>Пчелиная фабрика</h3>
+ <p>Мультиблочная структура 5х5х5 блоков, позволяющая делать пчелинные вещи. Для её постройки потребуется: 26 пчелиных оснований, 26 пчелиных покрытий, 48 пчелиных стёкол и главный блок — ядро пчелиной фабрики. Для быстрой постройки рекомендую воспользоваться <strong>строителем мультиструктур</strong>.</p> 
+ <p>Для ее работы требуется - <strong>ey энергия, предметы и жидкости</strong>(кол-во энерги и вид предметов и жидкостей зависят от крафта). Также она поддерживает такие улучшения как:
+<ol>
+  <li>улучшение:выталкиватель - позволяет мультиблоку выталкивать предметы</li>
+  <li>Все виды ускорителей - ускоряют работу мультиблока
+    <ol>
+      <li><img src="../../assets/icons/upgrade_speed_2.png" class="item-inline">Улучшение:ускоритель -  для максимальной скорости нужно 20 штук</li>
+      <li><img src="../../assets/icons/upgrade_speed_1.png" class="item-inline">Улучшенный ускоритель - для максимальной скорости нужно 8 штук</li>
+      <li><img src="../../assets/icons/upgrade_speed_2.png" class="item-inline">Продвинутый ускоритель - для максимальной скорости нужно 4 штуки</li>
+    </ol>
+  </li>
+  <li>Все виды сингулярных баков - увеличивают объём баков
+    <ol>
+      <li><img src="../../assets/icons/upgrade_singular_buck0.gif" class="item-inline">Улучшение:сингулярный бак 1 ур. - увеличивает до 1 тысячи ведер</li>
+ <li><img src="../../assets/icons/upgrade_singular_buck0.gif" class="item-inline">Улучшение сингулярный бак 2 ур. - увеличивает до 10 тысяч ведер</li>
+  <li><img src="../../assets/icons/upgrade_singular_buck0.gif" class="item-inline">Улучшение сингулярный бак 3 ур. - увеличивает до 100 тысяч ведер</li>
+    </ol>
+  </li>
+</ol>
+Для её автоматизации достаточно поставить рядом вплотную интерфейс (если указываете жидкости в шаблоне, что очень удобно, но нужно проверять количество) или же поставить шину экспорта/МЭ поставщик и указать жидкости.
+</p>
+<div class="gui-container" data-json="forestry-map.json" data-image-id="forestry1"></div>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.23">
+        <div class="section-box">
+          <model-viewer class="section-model" src="../../assets/models/forestry2.geo.glb" camera-controls auto-rotate ar
+            shadow-intensity="1" environment-image="neutral" loading="lazy"></model-viewer>
+          <h3>Промышленный улей</h3>
+          <p><strong>Механизм работы</strong>
+            Многоблочная структура, которая вмещает в себя 7 пчел. Для работы требует
+            питательное вещество.
+            Имеет слоты для улучшений.</p>
+          <p><strong>Улучшения:</strong>
+          <ol>
+            <li><strong>Обработанный модуль улья:</strong> повышает продуктивность на 250%
+            </li>
+            <li><strong>Проверенный модуль улья:</strong> повышает продуктивность на 500%
+            </li>
+            <li><strong>Пропитанный модуль улья:</strong> повышает продуктивность на 1000%
+            </li>
+            <li><strong>Механизирующий модуль улья:</strong> автоматизирует подачу трутней в
+              слот трутней при
+              смерти матки</li>
+            <li><strong> Модуль генетического вмешательства улья:</strong> убирает
+              возможность смерти пчелы с
+              низкой породой</li>
+            <li><strong> Модуль эластичного сита улья:</strong> иногда дает пыльцу с
+              ближайших деревьев</li>
+            <li><strong> Очистительный модуль улья:</strong> забирает возможность пчелам
+              опылять деревья и
+              создавать цветы вокруг себя</li>
+            <li><strong> Модуль вечной работоспособности улья:</strong> позволяет пчелам
+              работать в ночное время и
+              в пещере</li>
+            <li><strong>Модуль мутации улья:</strong> повышает шанс мутации пчёл до 100%
+            </li>
+            <li><strong> Модуль увеличение продолжительности жизни улья:</strong> удлиняет
+              продолжительность
+              жизни пчел в 10 раз</li>
+            <li><strong>Модуль уменьшение продолжительности жизни улья:</strong> снижает
+              время жизни пчел до
+              одного цикла</li>
+            <li><strong>Модуль промышленной работы улья:</strong> Пчелы создают сразу по
+              стаку своей продукции</li>
+          </ol>
+          <p><strong> Подключение:</strong>
+            Для работы промышленного улья необходимо запитать его EU энергией.</p>
+          <p><strong> Автоматизация:</strong>
+            Промышленный улей можно подключить к системам автотранспорта(например, Ender
+            IO или AE2).
+            Шина экспорта может подавать питательную среду в улей.
+            С помощью интерфейса можно вытягивать соты и продукцию пчёл из улья.
+            Благодаря улучшениям может работать без участия игрока</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.24">
+        <div class="section-box">
+          <h3>Совершенная пасека</h3>
+          <p>Для работы нужны три аспекта из Thaumcraft: Fames, Machina, Meto (можно подать
+            через поставщик или печать Азанора). Также требуется мана, чтобы пчёлы не
+            умирали и игнорировали условия. Поддерживает улучшение «Квантовый генератор».
+          </p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.25">
+        <div class="section-box">
+      <model-viewer class="section-model" src="../../assets/models/centrifuge.geo.glb" camera-controls auto-rotate ar
+            shadow-intensity="1" environment-image="neutral" loading="lazy"></model-viewer>
+          <h3>Совершенная центрифуга</h3>
+          <p>Перерабатывает соты со 100% шансом. Имеет 9 слотов.</p>
+        </div>
+      </div>
+    
+      <div class="guide-section" id="4.26">
+        <div class="section-box">
+      <model-viewer class="section-model" src="../../assets/models/bee_flower.geo.glb" camera-controls auto-rotate ar
+            shadow-intensity="1" environment-image="neutral" loading="lazy"></model-viewer>
+          <h3>Механический гибискус</h3>
+          <p>Превращает пчёл низкой породы в чистую под действием маны.</p>
+        </div>
+      </div>
+
+            <div class="guide-section" id="4.27">
+        <div class="section-box">
+      <model-viewer class="section-model" src="../../assets/models/bee_flower2.geo.glb" camera-controls auto-rotate ar
+            shadow-intensity="1" environment-image="neutral" loading="lazy"></model-viewer>
+          <h3>Механический улейцинт</h3>
+          <p>Генерирует пчёл (чистых и низкой породы) в 18 слотах. Требует ману.</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.28">
+        <div class="section-box">
+          <model-viewer class="section-model" src="../../assets/models/kodeks.geo.glb" camera-controls auto-rotate ar
+            shadow-intensity="1" environment-image="neutral" loading="lazy"></model-viewer>
+          <h3>Кодекс жизни</h3>
+          <p>Хранилище всех пчёл, саженцев, бабочек и цветов. Выбери нужный организм
+            и нажми «Получить» — или сохрани свой выбор!</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.29">
+        <h2>GENETICS</h2>
+        <div class="section-box">
+          <p>Здесь описаны механизмы из мода Genetics (альтернатива Gendustry).</p>
+          <p><strong>Изолятор:</strong> извлекает ген в пузырёк сыворотки (требует
+            этанол и фермент).</p>
+          <p><strong>Полимеризатор:</strong> усиливает сыворотку (сырая ДНК +
+            бактерия).</p>
+          <p><strong>Инокулятор/Сплайсер:</strong> прививает гены (сплайсер быстрее,
+            но жрёт больше энергии).</p>
+          <p><strong>Секвенсор:</strong> анализирует гены (требует флюорофор: жёлтый
+            + оранжевый + светопыль).</p>
+          <p><strong>Акклиматизатор:</strong> расширяет диапазоны
+            температуры/влажности до максимума.</p>
+          <p><strong>Инкубатор:</strong> создаёт бактерии, фермент, полимеризованную
+            бактерию и выращивает взрослых особей из зародышей.</p>
+          <p><strong>Анализатор:</strong> показывает гены организма (требует
+            краситель для ДНК).</p>
+        </div>
+      </div>
+
+      <div class="guide-section" id="4.30">
+        <h2>Выведение основных пчёл</h2>
+        <div class="section-box">
+          <p>Для начала скрафть сачок — он нужен, чтобы ломать улья и ловить бабочек
+            (улья также можно ломать ваджрой).</p>
+          <p>На сервере 15 ульев: каменный, лесной, луговой, пустынный, тропический,
+            снежный, болотный, странный, необычный, резонирующий, водный, адский,
+            глубинный, забвенный.</p>
+          <p>Насобирав пчёл, проверяй их в анализаторе (требуется капля мёда)!
+            Обрати внимание на <strong>активный</strong> и
+            <strong>неактивный</strong> гены. Неактивный покажет, кем станет пчела
+            после следующего скрещивания.
+          </p>
+          <p><strong>Гибриды</strong> (разные активный/неактивный гены) не подходят
+            для фарма — они могут превратиться во что угодно!</p>
+          <p>Цель — вывести <strong>обычную пчелу</strong> с идентичными генами.
+            Например: луговая принцесса + лесной трутень → обычная матка.</p>
+          <p>Когда получишь хотя бы одну обычную принцессу — разводи трутней, чтобы
+            создать стабильную популяцию.</p>
+          <p>Основные виды для фарма: <strong>имперская</strong> (маточное молочко),
+            <strong>трудолюбивая</strong> (пыльца), <strong>шафрановая</strong>
+            (мёд).
+          </p>
+          <p>Для автоматизации построй <strong>большой улей</strong> (3×3×3 из
+            пчелиных ульев + дубовые плиты сверху). Добавляй блоки: обогреватель,
+            осветитель, роевня, стабилизатор — и наслаждайся!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../styles/stars/stars.js"></script>
+  <script src="../../styles/menu/menu.js"></script>
+  <script src="../../data-base-guids/guides-search.js"></script>
+  <script src="../../data-base-guids/guides-data.js"></script>
+    <script src="../../styles/guids/gui.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+#content-wrapper {
+    padding-top: 140px;
+    transition: padding-top 0.3s;
+}
+
+/* === ЗАГОЛОВКИ ТАБЛИЦЫ (ОБЯЗАТЕЛЬНО!) === */
+.mod-table thead th,
+.search-results-table thead th {
+    background: rgba(30, 30, 50, 0.85);
+    color: #e0e0ff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 2px solid rgba(80, 80, 120, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: table-cell !important; /* ← ВАЖНО! */
+}
+
+/* === РАЗДЕЛИТЕЛЬ СТОЛБЦОВ === */
+.mod-table td:first-child,
+.mod-table th:first-child,
+.search-results-table td:first-child,
+.search-results-table th:first-child {
+    width: 60%;
+    border-right: 2px solid rgba(80, 80, 120, 0.3);
+}
+
+.mod-table td:last-child,
+.mod-table th:last-child,
+.search-results-table td:last-child,
+.search-results-table th:last-child {
+    width: 40%;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 40px 12px 60px;
+    border: none;
+    outline: none;
+    background: rgba(30, 30, 50, 0.85) !important;
+    color: #e0e0ff !important;
+    font-family: 'Exo 2', Arial, sans-serif !important;
+    font-size: 1rem !important;
+    border-radius: 12px;
+    appearance: none !important;
+}
+
+#search-input::placeholder {
+    color: #a0a0c0 !important;
+    opacity: 1 !important;
+}
+
+#search-clear {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #e0e0ff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#search-clear:hover {
+    opacity: 1;
+    color: #ff6b9d;
+}
+
+/* === КНОПКА ВЫБОРА ОТДЕЛА === */
+.mods-btn {
+    display: block;
+    width: 240px;
+    margin: 0 auto 30px;
+    padding: 12px;
+    background: rgba(30, 30, 50, 0.9);
+    border: 2px solid rgba(80, 80, 120, 0.3);
+    color: #e0e0ff;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.mods-btn:hover {
+    background: rgba(50, 50, 80, 0.95);
+    box-shadow: 0px 0 10px rgba(195, 187, 243, 0.4);
+}
+
+/* === ТАБЛИЦЫ === */
+.mod-table,
+.search-results {
+    background: rgba(30, 30, 50, 0.9);
+    border: 2px solid rgba(80, 80, 120, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 0 auto 25px;
+    display: none;
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.mod-table.visible {
+    animation: fadeInTable 0.3s ease;
+}
+
+.mod-table.closing {
+    animation: fadeOutTable 0.3s ease forwards;
+}
+
+.search-results.visible {
+    animation: fadeInTable 0.3s ease;
+}
+
+/* === ЗАГОЛОВКИ ТАБЛИЦЫ === */
+.mod-table th,
+.search-results-table th {
+    background: rgba(30, 30, 50, 0.85);
+    color: #e0e0ff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 2px solid rgba(80, 80, 120, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* === ЯЧЕЙКИ === */
+.mod-table td,
+.mod-table th,
+.search-results-table td,
+.search-results-table th {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(80, 80, 120, 0.4);
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* === РАЗДЕЛИТЕЛЬ СТОЛБЦОВ === */
+.mod-table td:first-child,
+.mod-table th:first-child,
+.search-results-table td:first-child,
+.search-results-table th:first-child {
+    width: 60%;
+    border-right: 2px solid rgba(80, 80, 120, 0.3);
+}
+
+.mod-table td:last-child,
+.mod-table th:last-child,
+.search-results-table td:last-child,
+.search-results-table th:last-child {
+    width: 40%;
+}
+
+/* === ПОДСВЕТКА ПРИ НАВЕДЕНИИ === */
+.mod-table tr:hover,
+.search-results-table tr:hover {
+    background: rgba(50, 50, 80, 0.3);
+    transition: background 0.2s ease;
+}
+
+/* === КНОПКА ЗАКРЫТИЯ === */
+#close-table {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #e0e0ff;
+    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 10;
+    transition: all 0.2s ease;
+    display: none;
+}
+
+#close-table:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* === ЗАГОЛОВОК ТАБЛИЦЫ === */
+#table-title {
+    color: #e0e0ff;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* === СТРОКИ ТАБЛИЦЫ === */
+.mod-table tr,
+.search-results-table tr {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* === МОДАЛЬНОЕ ОКНО === */
+.modal-content {
+    background: rgba(30, 30, 50, 0.95);
+    border: 2px solid rgba(80, 80, 120, 0.3);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 120px;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.mod-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    color: #e0e0ff;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    margin-bottom: 8px;
+}
+
+.mod-option:hover {
+    background: rgba(50, 50, 80, 0.9);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === АНИМАЦИИ === */
+@keyframes fadeInTable {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutTable {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(30px); }
+}
+
+@keyframes fadeInRow {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRules {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === АДАПТИВ === */
+@media (max-width: 768px) {
+    #content-wrapper { padding-top: 60px; }
+    .mods-btn { width: 220px; font-size: 0.95rem; border-radius: 12px; }
+    .mod-table, .search-results, .rules { padding: 16px; margin-bottom: 20px; border-radius: 12px; }
+    .modal-content { margin-top: 120px; padding: 16px; border-radius: 12px; }
+    .mod-option { padding: 10px 15px; font-size: 0.95rem; }
+    .mod-table td, .mod-table th, .search-results-table td, .search-results-table th { padding: 10px 12px; font-size: 0.9rem; }
+    #close-table { width: 36px; height: 36px; font-size: 1.2rem; }
+}
+
+/* === СКРОЛЛ ДЛЯ МОДАЛКИ === */
+#mods-modal .modal-content { max-height: 80vh; overflow-y: auto; }
+
+@media (min-width: 769px) {
+    #mods-modal .modal-content::-webkit-scrollbar { width: 8px; }
+    #mods-modal .modal-content::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 4px; }
+    #mods-modal .modal-content::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+    #mods-modal .modal-content::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.3); }
+}
+
+@media (max-width: 768px) {
+    #mods-modal .modal-content::-webkit-scrollbar { width: 0px; background: transparent; }
+}
+
+/* === ЗАГОЛОВКИ ТАБЛИЦЫ (ОБЯЗАТЕЛЬНО!) === */
+.mod-table thead th,
+.search-results-table thead th {
+    background: rgba(30, 30, 50, 0.85) !important;
+    color: #e0e0ff !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    padding: 14px 16px !important;
+    text-align: left !important;
+    border-bottom: 2px solid rgba(80, 80, 120, 0.5) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    display: table-cell !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.mod-table thead,
+.search-results-table thead {
+    display: table-header-group !important;
+}
+
+/* === АНИМАЦИИ === */
+@keyframes fadeInRow {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInTable {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutTable {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(30px); }
+}
+
+.mod-table.visible { animation: fadeInTable 0.3s ease; }
+.mod-table.closing { animation: fadeOutTable 0.3s ease forwards; }
+
+/* === ТАБЛИЦЫ === */
+.mod-table, .search-results {
+    background: rgba(30, 30, 50, 0.9);
+    border: 2px solid rgba(80, 80, 120, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 0 auto 25px;
+    display: none;
+    overflow: visible !important; /* ← ВАЖНО для thead! */
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+}
+
+/* === РАЗДЕЛИТЕЛЬ СТОЛБЦОВ === */
+.mod-table td:first-child, .mod-table th:first-child,
+.search-results-table td:first-child, .search-results-table th:first-child {
+    width: 60%;
+    border-right: 2px solid rgba(80, 80, 120, 0.3);
+}
+
+.mod-table td:last-child, .mod-table th:last-child,
+.search-results-table td:last-child, .search-results-table th:last-child {
+    width: 40%;
+}

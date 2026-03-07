@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": "forestry",
+      "title": "Forestry",
+      "image": "../../assets/ghost/лого1.png",
+      "guides": [
+        {
+          "id": "forestry-4-23",
+          "sectionId": "4.23",
+          "title": "Промышленный улей",
+          "model": "../../assets/models/forestry2.geo.glb",
+          "content": "<p>Многоблочная структура...</p>",
+          "guiId": "apiary-gui",
+          "image": "../../assets/guides/forestry-apiary.png"
+        },
+        {
+          "id": "forestry-4-24",
+          "sectionId": "4.24",
+          "title": "Экстрактор ДНК",
+          "content": "<p>Извлекает ДНК...</p>",
+          "guiId": "test",
+          "image": "../../assets/guides/forestry-extractor.png"
+        }
+      ]
+    },
+    {
+      "id": "botania",
+      "title": "Botania",
+      "image": "../../assets/ghost/лого1.png",
+      "guides": [
+        {
+          "id": "botania-5-01",
+          "sectionId": "5.01",
+          "title": "Алхимический стол",
+          "content": "<p>Стол для создания...</p>",
+          "image": "../../assets/guides/botania-table.png"
+        }
+      ]
+    }
+  ]
+}

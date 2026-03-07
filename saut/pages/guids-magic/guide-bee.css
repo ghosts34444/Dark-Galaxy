@@ -1,0 +1,355 @@
+/* === СМЕЩЕНИЕ КОНТЕНТА === */
+#content-wrapper {
+  padding-top: 140px;
+}
+
+@media (max-width: 768px) {
+  #content-wrapper {
+    padding-top: 120px;
+  }
+}
+
+/* === ПОИСК (FIXED ПОД МЕНЮ) === */
+.search-input-wrapper {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  z-index: 996;
+}
+
+#guide-search {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #e0e0ff;
+  font-family: 'Exo 2', Arial, sans-serif;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#search-clear {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #e0e0ff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+#search-clear:hover {
+  opacity: 1;
+  color: #ff6b9d;
+}
+
+/* Мобиле */
+@media (max-width: 768px) {
+  .search-input-wrapper {
+    top: 60px;
+    max-width: 90vw;
+  }
+  
+  #guide-search {
+    padding: 10px 36px 10px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+/* === РЕЗУЛЬТАТЫ ПОИСКА === */
+#search-results-container {
+  max-width: 1200px;
+  margin: 140px auto 30px; /* Отступ под поиск */
+  padding: 0 20px;
+  display: none;
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  #search-results-container {
+    margin-top: 120px;
+  }
+  
+  .search-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === РЕЗУЛЬТАТЫ ПОИСКА === */
+.search-result {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(200, 200, 230, 0.05)
+  );
+  border: 2px solid rgba(80, 80, 120, 0.3);
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 160px; /* ← чуть выше для изображения */
+}
+
+/* Изображение */
+.search-result-image {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-result-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Название карточки */
+.search-result h4 {
+  text-align: center; /* ← центрирование */
+  margin: 0 0 8px;
+}
+
+.search-result h4 a {
+  color: #e0e0ff; /* ← твой цвет */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Выделение при поиске */
+.search-result mark {
+  background: rgba(136, 117, 182, 0.4); /* ← светлее (было 0.3) */
+  color: #ffffff; /* ← белый текст */
+  padding: 0 4px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Модуль (Forestry) */
+.search-result small {
+  color: #9a9ace;
+  font-size: 0.9rem;
+}
+
+.search-result h4 a {
+  color: #e6d7f3;
+  text-decoration: none;
+}
+/* === ТЕКСТОВЫЙ БЛОК === */
+.section-box {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(200, 200, 230, 0.05)
+  );
+  border: 2px solid rgba(80, 80, 120, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* Заголовки */
+.section-box h3 {
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .section-box h3 {
+    text-align: center;
+  }
+}
+
+/* === ИЗОБРАЖЕНИЯ И МОДЕЛИ === */
+.section-image,
+.section-model {
+  display: block;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  width: 200px;
+  height: auto;
+}
+
+/* ПК: слева */
+@media (min-width: 769px) {
+  .section-image,
+  .section-model {
+    float: top;
+    margin: 0 10px 2px 470px;
+  }
+}
+
+/* Мобиле: по центру */
+@media (max-width: 768px) {
+  .section-image,
+  .section-model {
+    margin: 0 auto 16px;
+    width: 200px;
+    float: none;
+  }
+}
+
+/* 3D-модели */
+.section-model {
+  width: 180px;
+  height: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .section-model {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* === ИЗОБРАЖЕНИЕ В РЕЗУЛЬТАТАХ === */
+.search-result-image {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-result-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Заглушка для отсутствующих изображений */
+.search-result-image:empty::before {
+  content: "🖼️";
+  font-size: 2rem;
+  color: #666;
+}
+
+/* === ИНЛайн-ПРЕДМЕТЫ === */
+.item-inline {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin: 0 4px;
+  image-rendering: pixelated;
+  background: #000000;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.item-inline:hover {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
+}
+
+.adaptive-gui-wrapper {
+  position: relative;
+  margin: 15px 0;
+}
+
+/* Карта */
+.gui-map-container {
+  position: relative;
+  display: inline-block;
+}
+
+.gui-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Подсказка на ПК */
+.map-tooltip {
+  position: absolute;
+  background: rgba(30, 30, 50, 0.95);
+  border: 2px solid #8a6dff;
+  border-radius: 12px;
+  padding: 10px;
+  color: #e0e0ff;
+  font-family: 'Exo 2', sans-serif;
+  pointer-events: none;
+  z-index: 1000;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+/* Мобиле: оверлей */
+.mobile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Мобиле: подсветка зон */
+.mobile-zone-highlight {
+  position: absolute;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Мобиле: цифры ID */
+.zone-id-label {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Мобиле: карточки */
+.mobile-cards {
+  display: none;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .mobile-cards {
+    display: block;
+  }
+  
+  .map-mobile-item {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(80, 80, 120, 0.3);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: #e0e0ff;
+    font-size: 0.95rem;
+  }
+}
