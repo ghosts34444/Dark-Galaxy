@@ -1,0 +1,105 @@
+{
+  "categories": [
+    {
+      "id": "forestry",
+      "title": "Forestry",
+      "image": "../../assets/ghost/лого1.png",
+      "guides": [
+        {
+          "id": "forestry-4-23",
+          "sectionId": "4.23",
+          "title": "Промышленный улей",
+          "searchAliases": [
+            "промышленный улей",
+            "forestry",
+            "forestry промышленный улей",
+            "4.23"
+          ],
+          "sections": [
+            {
+              "type": "text",
+              "content": "<p>Многоблочная структура для разведения пчёл.</p>",
+              "image": "forestry-apiary.png",
+              "guiId": ""
+            },
+            {
+              "type": "text",
+              "content": "<p>Работает от пчеловода.</p>",
+              "image": "",
+              "guiId": "apiary-gui"
+            },
+            {
+              "type": "text",
+              "content": "<p>Улучшается рамками.</p>",
+              "image": "",
+              "guiId": ""
+            }
+          ]
+        },
+        {
+          "id": "forestry-4-24",
+          "sectionId": "4.24",
+          "title": "Экстрактор ДНК",
+          "searchAliases": [
+            "экстрактор днк",
+            "forestry",
+            "forestry экстрактор днк",
+            "4.24"
+          ],
+          "sections": [
+            {
+              "type": "text",
+              "content": "<p>Извлекает ДНК из организмов.</p>",
+              "image": "forestry-extractor.png",
+              "guiId": ""
+            },
+            {
+              "type": "text",
+              "content": "<p>Требует питание.</p>",
+              "image": "",
+              "guiId": "test"
+            },
+            {
+              "type": "text",
+              "content": "<p>Хранит до 64 образцов.</p>",
+              "image": "",
+              "guiId": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "botania",
+      "title": "Botania",
+      "image": "../../assets/ghost/лого1.png",
+      "guides": [
+        {
+          "id": "botania-5-01",
+          "sectionId": "5.01",
+          "title": "Алхимический стол",
+          "searchAliases": [
+            "алхимический стол",
+            "botania",
+            "botania алхимический стол",
+            "5.01"
+          ],
+          "sections": [
+            {
+              "type": "text",
+              "content": "<p>Стол для создания артефактов.</p>",
+              "image": "botania-table.png",
+              "guiId": ""
+            },
+            {
+              "type": "text",
+              "content": "<p>Использует ману.</p>",
+              "image": "",
+              "guiId": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
